@@ -1,0 +1,25 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.sudowhizzy/sudowhizzy",
+  "title": "SudoWhizzy",
+  "description": "Let Claude, ChatGPT or Cursor manage your Linux servers, with approvals for anything risky.",
+  "version": "0.5.0",
+  "websiteUrl": "https://sudowhizzy.com",
+  "repository": {
+    "url": "https://github.com/sudowhizzy/sudowhizzy-mcp",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://sudowhizzy.com/mcp/{address}",
+      "variables": {
+        "address": {
+          "description": "Your private MCP address from the SudoWhizzy dashboard (sign up free at https://sudowhizzy.com)",
+          "isRequired": true,
+          "isSecret": true
+        }
+      }
+    }
+  ]
+}
