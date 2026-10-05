@@ -19,7 +19,12 @@ SudoWhizzy is a hosted, remote MCP server. Install a small agent on your server 
 
 ## Connect your AI client
 
-Your MCP address looks like `https://sudowhizzy.com/mcp/YOUR-ADDRESS`. Keep it private, and make a new one in the dashboard if it leaks.
+Two ways in:
+
+- **Sign in (OAuth):** clients that support sign-in for remote MCP servers connect to `https://sudowhizzy.com/mcp`. You sign in to SudoWhizzy, see which app is asking and allow it. Each app gets its own access, which you can end under Security in the dashboard.
+- **Private address:** `https://sudowhizzy.com/mcp/YOUR-ADDRESS`, from the dashboard, for clients without sign-in. Keep it private, and make a new one in the dashboard if it leaks. The examples below use it.
+
+The tool and playbook catalogue is public at `https://sudowhizzy.com/mcp/catalog`.
 
 **Claude (claude.ai and Claude Desktop):** Settings, Connectors, Add custom connector. Name it SudoWhizzy, paste the address and leave the OAuth fields empty. [Guide](https://sudowhizzy.com/claude)
 

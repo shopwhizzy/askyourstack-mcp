@@ -3,13 +3,17 @@
   "name": "com.sudowhizzy/sudowhizzy",
   "title": "SudoWhizzy",
   "description": "Let Claude, ChatGPT or Cursor manage your Linux servers and SEO, with approvals for anything risky.",
-  "version": "0.9.0",
+  "version": "0.10.0",
   "websiteUrl": "https://sudowhizzy.com",
   "repository": {
     "url": "https://github.com/shopwhizzy/sudowhizzy-mcp",
     "source": "github"
   },
   "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://sudowhizzy.com/mcp"
+    },
     {
       "type": "streamable-http",
       "url": "https://sudowhizzy.com/mcp/{address}",
