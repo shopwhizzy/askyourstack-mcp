@@ -2,7 +2,7 @@
 
 **Let Claude, ChatGPT, Cursor or Claude Code manage your own Linux servers, with approvals for anything risky.**
 
-SudoWhizzy is a hosted, remote MCP server. Install a small agent on your server with one line, add your private SudoWhizzy MCP address to your AI client, and ask in plain words: set up a raw VPS, install Magento or WordPress, fix a 500 error, take backups, clean up malware, harden the server or move a site to a new one. For SEO it reads Google Search Console, Core Web Vitals and your structured data next to what Googlebot really fetches in your server logs, and fixes the causes on the server.
+SudoWhizzy is a hosted, remote MCP server. Install a small agent on your server with one line, add your private SudoWhizzy MCP address to your AI client, and ask in plain words: set up a raw VPS, install Magento or WordPress, fix a 500 error, take backups, clean up malware, harden the server or move a site to a new one. For SEO it reads Google Search Console, Google Analytics 4, Core Web Vitals, on-page audits and your structured data next to what Googlebot really fetches in your server logs, and fixes the causes on the server.
 
 - Website: https://sudowhizzy.com
 - Docs: https://sudowhizzy.com/docs
@@ -78,8 +78,20 @@ Any other client that supports remote MCP servers over streamable HTTP works the
 | `core_web_vitals` | Real-user LCP, INP, CLS, FCP and TTFB from the Chrome UX Report for a page or site, LCP broken into parts, 6 months of weekly history, optional Lighthouse test | Starter |
 | `validate_schema` | Structured data (JSON-LD and microdata) checked against schema.org and Google's rich-result requirements, live URL or pasted HTML | Starter |
 | `google_updates` | Google core, spam and Discover updates since 2021 with their rollout dates, to line up with traffic changes | Starter |
+| `gsc_cannibalization` | Searches where two or more of the site's pages compete in Google, with clicks, impressions and position per page | Pro |
+| `ga4_properties` | The Google Analytics 4 properties the user picked, with a tracking health check (data flowing, key events, retention) | Pro |
+| `ga4_overview` | Sessions, users, engagement, conversions and revenue against the period before, by channel, with organic search's share | Pro |
+| `ga4_landing_pages` | Landing pages with engagement, bounce rate, conversions and revenue, per channel and compared with an earlier period | Pro |
+| `ga4_ai_traffic` | Visits from ChatGPT, Perplexity, Gemini, Claude, Copilot and other AI assistants, and the pages they land on | Pro |
+| `ga4_report` | Any GA4 report: new vs returning, site search terms, devices, countries, sources, e-commerce | Pro |
+| `ga4_realtime` | Active users in the last 30 minutes by page, country and device | Pro |
+| `page_audit` | On-page audit of up to 10 URLs on any site: redirects, headers, title, description, robots, canonical, hreflang, headings, Open Graph, alt text, content length, issues | Pro |
+| `page_links` | Every link on a page with anchor text and nofollow; finds broken and redirected links | Pro |
+| `page_content` | A page's main text without navigation and footers, as markdown | Pro |
+| `robots_check` | robots.txt tests the way Google reads them, for Googlebot, Bingbot and AI crawlers | Pro |
+| `sitemap_check` | Sitemap audit (indexes, limits, lastmod) with a sample of URLs checked for status, redirects, noindex and canonical | Pro |
 
-Search Console history by plan: Starter the last 30 days, Pro 90 days, Agency all 16 months Google keeps. Core Web Vitals: 100 checks a day on Starter, 300 on Pro, 1,000 on Agency.
+Search Console history by plan: Starter the last 30 days, Pro 90 days, Agency all 16 months Google keeps. Google Analytics 4: Pro 10 properties and 90 days, Agency 25 and all history. Core Web Vitals: 100 checks a day on Starter, 300 on Pro, 1,000 on Agency. Agency can connect up to 3 Google accounts (clients' own).
 
 ## Playbooks
 
@@ -102,7 +114,7 @@ Linux with systemd (Debian, Ubuntu, Rocky Linux, AlmaLinux, RHEL and similar), x
 
 ## Pricing
 
-Free: one server, read-only, 50 tool calls a day. Paid plans add changes, approvals and snapshots and the SEO tools with Google Search Console (Starter, 1 server, 3 properties), the malware scan, site checks every 15 minutes and longer Search Console history (Pro, 5 servers, 10 properties; Agency, 25 servers, 25 properties). Current prices: https://sudowhizzy.com/#pricing. Your AI client is billed separately by its own provider.
+Free: one server, read-only, 50 tool calls a day. Paid plans add changes, approvals and snapshots and the SEO tools with Google Search Console (Starter, 1 server, 3 properties), the malware scan, site checks every 15 minutes, Google Analytics 4, on-page and technical SEO tools and longer history (Pro, 5 servers, 10 properties; Agency, 25 servers, 25 properties, up to 3 Google accounts). Current prices: https://sudowhizzy.com/#pricing. Your AI client is billed separately by its own provider.
 
 ## Support
 
