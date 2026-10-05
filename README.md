@@ -57,7 +57,7 @@ Any other client that supports remote MCP servers over streamable HTTP works the
 | `list_servers` | The servers on the account: online, safety mode, paused | Free |
 | `server_facts` | Distro, CPU, memory, disk, package manager, services, ports, Magento and WordPress installs | Free |
 | `get_playbook` | Step-by-step guides for the AI (see Playbooks) | Free |
-| `health_report` | Disk and inodes, memory, load, failed services, certificates, security updates, reboot needed | Free |
+| `health_report` | Disk and inodes, memory, load, failed services, certificates, security updates, reboot needed, backups (age and rhythm), out-of-memory kills, PHP out of workers, database connection limit; on Pro and Agency also software with a known vulnerability | Free |
 | `list_sites` | Magento and WordPress sites, found from the web server's own configuration (Plesk, CloudPanel, RunCloud, DirectAdmin and plain layouts): root, domains, access logs, owner, version, database (passwords never shown) | Free |
 | `read_file` | Read a file | Free |
 | `run` | Run a shell command as root; read-only commands on Free | Free / Starter |
