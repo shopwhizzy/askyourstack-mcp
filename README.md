@@ -77,6 +77,9 @@ Any other client that supports remote MCP servers over streamable HTTP works the
 | `magento` | `bin/magento` as the site's owner | Starter |
 | `wp` | `wp-cli` as the site's owner | Starter |
 | `site_console` | Run a site's own command line tool as its owner, also inside a Docker container: bin/console (Shopware 6, PrestaShop), artisan (Laravel), drush (Drupal), Joomla's cli. Lists run straight away; uninstalling, database resets and arbitrary code need approval | Starter |
+| `connected_sites` | Sites connected without a server (a WordPress on any host, through its REST API with an application password): name, mode, content types | Free |
+| `content_list`, `content_get` | Read a connected site's posts, pages, media, categories, tags and other content types | Free |
+| `content_save`, `content_upload`, `content_trash`, `content_undo` | Write drafts, edit, upload images, trash and undo on a connected site, inside the mode its owner chose (read-only, drafts only, publish too); what a change replaced is kept 90 days | Starter |
 | `seo_fields` | WordPress SEO titles, meta descriptions and image alt texts (Yoast SEO, Rank Math, SEOPress, The SEO Framework): list what is there or missing, change in small batches with a preview of old against new, undo a batch | Starter |
 | `db_dump` | Dump a site's database on its server, with its own credentials | Starter |
 | `transfer`, `transfer_close` | Copy a folder directly between two of your servers for a migration | Starter |
