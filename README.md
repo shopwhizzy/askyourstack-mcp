@@ -81,6 +81,10 @@ Any other client that supports remote MCP servers over streamable HTTP works the
 | `transfer`, `transfer_close` | Copy a folder directly between two of your servers for a migration | Starter |
 | `malware_scan` | Backdoors, PHP in uploads, disguised PHP, injected scripts in the database, suspicious cron, plus a maintained rule set: known skimmer and backdoor signatures, missing Magento security patches, vulnerable modules, WordPress plugins and themes, exposed .git and .env, config copies, crypto miners and rootkit signs on the server | Pro |
 | `crawl_report` | What Googlebot, Bingbot, AI crawlers and SEO tools really fetched, from the access logs: errors, crawl waste, fake Googlebots | Free |
+| `site_audit` | Crawl a whole site from the server it runs on (up to 5,000 pages, no CDN in the way), in the background: status, redirects, titles, canonicals, noindex, word counts, links, sitemap coverage for every page | Pro |
+| `site_audit_report` | Read a site audit by issue (broken links, redirect chains, repeated titles, duplicate and thin pages, sitemap problems), by page, or against the run before | Pro |
+| `seo_history` | Daily Search Console, Analytics and Core Web Vitals figures stored once the user switches history on, with alerts: clicks fell, a top page left the index, a vital turned poor | Starter |
+| `indexnow_submit` | Tell Bing, Yandex and the other IndexNow search engines which pages are new, changed or gone | Starter |
 | `gsc_properties` | The Google Search Console properties the user picked (connected read-only in the dashboard) | Starter |
 | `gsc_performance_overview` | How the site is doing: the period against the one before, daily trend, biggest winning and losing queries and pages | Starter |
 | `gsc_search_analytics` | Clicks, impressions, CTR and position by query, page, country, device or date, with filters and two-period comparison | Starter |
