@@ -57,6 +57,7 @@ Any other client that supports remote MCP servers over streamable HTTP works the
 | Tool | What it does | Plan |
 |---|---|---|
 | `overview` | Where everything stands in one call: plan, servers and their sites, open problems and warnings from the monitoring, approvals waiting, connected Google properties, saved notes and recent work | Free |
+| `propose_plan` | Ask approval once for a job with several risky steps: the user sees every risky step and approves them together; each then runs once, exactly as listed | Free |
 | `save_note`, `forget_note` | Short notes about a server or the account that the next chat sees in `overview` (never passwords: those are refused) | Free |
 | `log_work` | A plain summary of a finished task, for the owner's dashboard and the next chat | Free |
 | `list_servers` | The servers on the account: online, safety mode, paused | Free |
@@ -110,7 +111,7 @@ Served as MCP prompts and through `get_playbook`: `server-setup`, `magento`, `wo
 ## Safety
 
 - **Every call is sorted by risk.** Reads run at once. Changes run after `/etc` is saved. Destructive actions (deleting your data, dropping databases, SSH, sudo and firewall changes, reboots) wait for your approval. Anything touching the agent's own key is blocked.
-- **Approvals the AI cannot fake.** You approve signed in on sudowhizzy.com; an approval runs once, only with the exact arguments you saw, within 30 minutes. Text planted in a log or web page cannot approve anything.
+- **Approvals the AI cannot fake.** You approve signed in on sudowhizzy.com; an approval runs once, only with the exact arguments you saw, within 30 minutes. Text planted in a log or web page cannot approve anything. The approval page says in plain words what the action does, what could go wrong and how to undo it, and before an approved delete of database tables or whole folders a copy is saved first when the command names them plainly.
 - **Modes and kill switch.** Each server is read-only, normal or full trust. Pause a server or the whole account in one click; disconnecting revokes the agent.
 - **Undo.** `/etc` snapshots before changes, previous versions of every overwritten file, snapshots and rollback.
 - **Secrets stay on the server.** Database credentials are read from the site's own config and never reach the AI. Your MCP address is stored only as a hash.
