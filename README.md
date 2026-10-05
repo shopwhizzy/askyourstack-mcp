@@ -2,7 +2,7 @@
 
 **Let Claude, ChatGPT, Cursor or Claude Code manage your own Linux servers, with approvals for anything risky.**
 
-SudoWhizzy is a hosted, remote MCP server. Install a small agent on your server with one line, add your private SudoWhizzy MCP address to your AI client, and ask in plain words: set up a raw VPS, install Magento or WordPress, fix a 500 error, take backups, clean up malware, harden the server or move a site to a new one.
+SudoWhizzy is a hosted, remote MCP server. Install a small agent on your server with one line, add your private SudoWhizzy MCP address to your AI client, and ask in plain words: set up a raw VPS, install Magento or WordPress, fix a 500 error, take backups, clean up malware, harden the server or move a site to a new one. For SEO it reads Google Search Console, Core Web Vitals and your structured data next to what Googlebot really fetches in your server logs, and fixes the causes on the server.
 
 - Website: https://sudowhizzy.com
 - Docs: https://sudowhizzy.com/docs
@@ -69,10 +69,21 @@ Any other client that supports remote MCP servers over streamable HTTP works the
 | `db_dump` | Dump a site's database on its server, with its own credentials | Starter |
 | `transfer`, `transfer_close` | Copy a folder directly between two of your servers for a migration | Starter |
 | `malware_scan` | Backdoors, PHP in uploads, disguised PHP, injected scripts in the database, suspicious cron | Pro |
+| `crawl_report` | What Googlebot, Bingbot, AI crawlers and SEO tools really fetched, from the access logs: errors, crawl waste, fake Googlebots | Free |
+| `gsc_properties` | The Google Search Console properties the user picked (connected read-only in the dashboard) | Starter |
+| `gsc_performance_overview` | How the site is doing: the period against the one before, daily trend, biggest winning and losing queries and pages | Starter |
+| `gsc_search_analytics` | Clicks, impressions, CTR and position by query, page, country, device or date, with filters and two-period comparison | Starter |
+| `gsc_inspect_url` | Google's URL Inspection for up to 20 URLs: indexed or not and why, last crawl, Google's canonical | Starter |
+| `gsc_sitemaps` | Submitted sitemaps: errors, warnings, last download, URLs per type | Starter |
+| `core_web_vitals` | Real-user LCP, INP, CLS, FCP and TTFB from the Chrome UX Report for a page or site, LCP broken into parts, 6 months of weekly history, optional Lighthouse test | Starter |
+| `validate_schema` | Structured data (JSON-LD and microdata) checked against schema.org and Google's rich-result requirements, live URL or pasted HTML | Starter |
+| `google_updates` | Google core, spam and Discover updates since 2021 with their rollout dates, to line up with traffic changes | Starter |
+
+Search Console history by plan: Starter the last 30 days, Pro 90 days, Agency all 16 months Google keeps. Core Web Vitals: 100 checks a day on Starter, 300 on Pro, 1,000 on Agency.
 
 ## Playbooks
 
-Served as MCP prompts and through `get_playbook`: `server-setup`, `magento`, `wordpress`, `hardening`, `backups`, `site-checkup`, `malware-cleanup`, `migrate`. The AI fetches the right one on its own for tasks like a fresh Magento install or a hacked site.
+Served as MCP prompts and through `get_playbook`: `server-setup`, `magento`, `wordpress`, `hardening`, `backups`, `site-checkup`, `malware-cleanup`, `migrate`, `bot-attack`, `seo-technical`, `publish-content`. The AI fetches the right one on its own for tasks like a fresh Magento install or a hacked site.
 
 ## Safety
 
@@ -91,7 +102,7 @@ Linux with systemd (Debian, Ubuntu, Rocky Linux, AlmaLinux, RHEL and similar), x
 
 ## Pricing
 
-Free: one server, read-only, 50 tool calls a day. Paid plans add changes, approvals and snapshots (Starter, 1 server), the malware scan and site checks every 15 minutes (Pro, 5 servers; Agency, 25 servers). Current prices: https://sudowhizzy.com/#pricing. Your AI client is billed separately by its own provider.
+Free: one server, read-only, 50 tool calls a day. Paid plans add changes, approvals and snapshots and the SEO tools with Google Search Console (Starter, 1 server, 3 properties), the malware scan, site checks every 15 minutes and longer Search Console history (Pro, 5 servers, 10 properties; Agency, 25 servers, 25 properties). Current prices: https://sudowhizzy.com/#pricing. Your AI client is billed separately by its own provider.
 
 ## Support
 

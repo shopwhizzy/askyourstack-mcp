@@ -2,8 +2,8 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "com.sudowhizzy/sudowhizzy",
   "title": "SudoWhizzy",
-  "description": "Let Claude, ChatGPT or Cursor manage your Linux servers, with approvals for anything risky.",
-  "version": "0.5.0",
+  "description": "Let Claude, ChatGPT or Cursor manage your Linux servers and SEO, with approvals for anything risky.",
+  "version": "0.6.0",
   "websiteUrl": "https://sudowhizzy.com",
   "repository": {
     "url": "https://github.com/shopwhizzy/sudowhizzy-mcp",
