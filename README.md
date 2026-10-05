@@ -64,7 +64,7 @@ Any other client that supports remote MCP servers over streamable HTTP works the
 | `server_facts` | Distro, CPU, memory, disk, package manager, services, ports, Magento and WordPress installs | Free |
 | `get_playbook` | Step-by-step guides for the AI (see Playbooks) | Free |
 | `health_report` | Disk and inodes, memory, load, failed services, certificates, security updates, reboot needed, backups (age and rhythm), out-of-memory kills, PHP out of workers, database connection limit; on Pro and Agency also software with a known vulnerability | Free |
-| `list_sites` | Magento and WordPress sites, found from the web server's own configuration (Plesk, CloudPanel, RunCloud, DirectAdmin and plain layouts): root, domains, access logs, owner, version, database (passwords never shown) | Free |
+| `list_sites` | The sites on the server: Magento 2, OpenMage (Magento 1), WordPress and WooCommerce, PrestaShop, Shopware 6, Drupal, Joomla, OpenCart and Laravel, found from the web server's own configuration (Plesk, CloudPanel, RunCloud, DirectAdmin and plain layouts) and in Docker containers: kind, root, domains, access logs, owner, version, database (passwords never shown), its console | Free |
 | `logs` | A log by name (web-error, php, magento, wordpress, database, system, mail, auth, or any file) for a time window, with repeated errors counted once, a sample of each and the latest lines | Free |
 | `read_file` | Read a file | Free |
 | `run` | Run a shell command as root; read-only commands on Free | Free / Starter |
@@ -76,6 +76,7 @@ Any other client that supports remote MCP servers over streamable HTTP works the
 | `db_query` | One SQL statement with the site's own credentials; reads in a read-only transaction | Starter |
 | `magento` | `bin/magento` as the site's owner | Starter |
 | `wp` | `wp-cli` as the site's owner | Starter |
+| `site_console` | Run a site's own command line tool as its owner, also inside a Docker container: bin/console (Shopware 6, PrestaShop), artisan (Laravel), drush (Drupal), Joomla's cli. Lists run straight away; uninstalling, database resets and arbitrary code need approval | Starter |
 | `seo_fields` | WordPress SEO titles, meta descriptions and image alt texts (Yoast SEO, Rank Math, SEOPress, The SEO Framework): list what is there or missing, change in small batches with a preview of old against new, undo a batch | Starter |
 | `db_dump` | Dump a site's database on its server, with its own credentials | Starter |
 | `transfer`, `transfer_close` | Copy a folder directly between two of your servers for a migration | Starter |
@@ -110,7 +111,7 @@ Search Console history by plan: Starter the last 30 days, Pro 90 days, Agency al
 
 ## Playbooks
 
-Served as MCP prompts and through `get_playbook`: `server-setup`, `magento`, `wordpress`, `hardening`, `backups`, `site-checkup`, `malware-cleanup`, `migrate`, `bot-attack`, `seo-technical`, `publish-content`, `performance`, `updates`, `site-down`, `add-site`, `staging`, `restore`, `magento-upgrade`, `email`. The AI fetches the right one on its own for tasks like a fresh Magento install or a hacked site.
+Served as MCP prompts and through `get_playbook`: `server-setup`, `magento`, `wordpress`, `hardening`, `backups`, `site-checkup`, `malware-cleanup`, `migrate`, `bot-attack`, `seo-technical`, `publish-content`, `performance`, `updates`, `site-down`, `add-site`, `staging`, `restore`, `magento-upgrade`, `email`, `woocommerce`, `prestashop`, `shopware`, `drupal`, `laravel`, `other-shops` (Joomla, OpenCart, OpenMage). The AI fetches the right one on its own for tasks like a fresh Magento install or a hacked site.
 
 ## Safety
 
