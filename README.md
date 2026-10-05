@@ -51,11 +51,14 @@ Any other client that supports remote MCP servers over streamable HTTP works the
 
 | Tool | What it does | Plan |
 |---|---|---|
+| `overview` | Where everything stands in one call: plan, servers and their sites, open problems and warnings from the monitoring, approvals waiting, connected Google properties, saved notes and recent work | Free |
+| `save_note`, `forget_note` | Short notes about a server or the account that the next chat sees in `overview` (never passwords: those are refused) | Free |
+| `log_work` | A plain summary of a finished task, for the owner's dashboard and the next chat | Free |
 | `list_servers` | The servers on the account: online, safety mode, paused | Free |
 | `server_facts` | Distro, CPU, memory, disk, package manager, services, ports, Magento and WordPress installs | Free |
 | `get_playbook` | Step-by-step guides for the AI (see Playbooks) | Free |
 | `health_report` | Disk and inodes, memory, load, failed services, certificates, security updates, reboot needed | Free |
-| `list_sites` | Magento and WordPress sites: root, owner, version, database (passwords never shown) | Free |
+| `list_sites` | Magento and WordPress sites, found from the web server's own configuration (Plesk, CloudPanel, RunCloud, DirectAdmin and plain layouts): root, domains, access logs, owner, version, database (passwords never shown) | Free |
 | `read_file` | Read a file | Free |
 | `run` | Run a shell command as root; read-only commands on Free | Free / Starter |
 | `list_jobs`, `job_output` | Follow background jobs, reading only new output | Free |
@@ -68,7 +71,7 @@ Any other client that supports remote MCP servers over streamable HTTP works the
 | `wp` | `wp-cli` as the site's owner | Starter |
 | `db_dump` | Dump a site's database on its server, with its own credentials | Starter |
 | `transfer`, `transfer_close` | Copy a folder directly between two of your servers for a migration | Starter |
-| `malware_scan` | Backdoors, PHP in uploads, disguised PHP, injected scripts in the database, suspicious cron | Pro |
+| `malware_scan` | Backdoors, PHP in uploads, disguised PHP, injected scripts in the database, suspicious cron, plus a maintained rule set: known skimmer and backdoor signatures, missing Magento security patches, vulnerable modules, WordPress plugins and themes, exposed .git and .env, config copies, crypto miners and rootkit signs on the server | Pro |
 | `crawl_report` | What Googlebot, Bingbot, AI crawlers and SEO tools really fetched, from the access logs: errors, crawl waste, fake Googlebots | Free |
 | `gsc_properties` | The Google Search Console properties the user picked (connected read-only in the dashboard) | Starter |
 | `gsc_performance_overview` | How the site is doing: the period against the one before, daily trend, biggest winning and losing queries and pages | Starter |
