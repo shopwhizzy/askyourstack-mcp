@@ -77,9 +77,11 @@ Any other client that supports remote MCP servers over streamable HTTP works the
 | `magento` | `bin/magento` as the site's owner | Starter |
 | `wp` | `wp-cli` as the site's owner | Starter |
 | `site_console` | Run a site's own command line tool as its owner, also inside a Docker container: bin/console (Shopware 6, PrestaShop), artisan (Laravel), drush (Drupal), Joomla's cli. Lists run straight away; uninstalling, database resets and arbitrary code need approval | Starter |
-| `connected_sites` | Sites connected without a server (a WordPress on any host, through its REST API with an application password): name, mode, content types | Free |
+| `connected_sites` | Sites connected without a server (a WordPress on any host, through its REST API with an application password, or a WhizzyCommerce shop through the shop's own connector): name, mode, content types | Free |
 | `content_list`, `content_get` | Read a connected site's posts, pages, media, categories, tags and other content types | Free |
 | `content_save`, `content_upload`, `content_trash`, `content_undo` | Write drafts, edit, upload images, trash and undo on a connected site, inside the mode its owner chose (read-only, drafts only, publish too); what a change replaced is kept 90 days | Starter |
+| `whizzy_tools` | What a connected WhizzyCommerce shop lets the AI do right now (the merchant decides per group in their WhizzyCommerce dashboard); search for one capability to read its whole input schema | Free |
+| `whizzy_call` | Run one capability of a connected WhizzyCommerce shop. Reads answer at once; a change comes back as a preview with a link the merchant confirms in their own dashboard, and its outcome can be read afterwards. Nothing the shop answers is stored | Free (reads), Starter |
 | `seo_fields` | WordPress SEO titles, meta descriptions and image alt texts (Yoast SEO, Rank Math, SEOPress, The SEO Framework): list what is there or missing, change in small batches with a preview of old against new, undo a batch | Starter |
 | `db_dump` | Dump a site's database on its server, with its own credentials | Starter |
 | `transfer`, `transfer_close` | Copy a folder directly between two of your servers for a migration | Starter |
@@ -114,7 +116,7 @@ Search Console history by plan: Starter the last 30 days, Pro 90 days, Agency al
 
 ## Playbooks
 
-Served as MCP prompts and through `get_playbook`: `server-setup`, `magento`, `wordpress`, `hardening`, `backups`, `site-checkup`, `malware-cleanup`, `migrate`, `bot-attack`, `seo-technical`, `publish-content`, `performance`, `updates`, `site-down`, `add-site`, `staging`, `restore`, `magento-upgrade`, `email`, `woocommerce`, `prestashop`, `shopware`, `drupal`, `laravel`, `other-shops` (Joomla, OpenCart, OpenMage), `seo-dashboard`. The AI fetches the right one on its own for tasks like a fresh Magento install or a hacked site.
+Served as MCP prompts and through `get_playbook`: `server-setup`, `magento`, `wordpress`, `hardening`, `backups`, `site-checkup`, `malware-cleanup`, `migrate`, `bot-attack`, `seo-technical`, `publish-content`, `performance`, `updates`, `site-down`, `add-site`, `staging`, `restore`, `magento-upgrade`, `email`, `woocommerce`, `prestashop`, `shopware`, `drupal`, `laravel`, `other-shops` (Joomla, OpenCart, OpenMage), `seo-dashboard`, `whizzycommerce`. The AI fetches the right one on its own for tasks like a fresh Magento install or a hacked site.
 
 ## Safety
 
