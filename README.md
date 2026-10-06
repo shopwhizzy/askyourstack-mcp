@@ -120,7 +120,7 @@ Search Console history by plan: Starter the last 30 days, Pro 90 days, Agency al
 
 ## Playbooks
 
-Served as MCP prompts and through `get_playbook`: `server-setup`, `magento`, `wordpress`, `hardening`, `backups`, `site-checkup`, `malware-cleanup`, `migrate`, `bot-attack`, `seo-technical`, `publish-content`, `performance`, `updates`, `site-down`, `add-site`, `staging`, `restore`, `magento-upgrade`, `email`, `woocommerce`, `prestashop`, `shopware`, `drupal`, `laravel`, `other-shops` (Joomla, OpenCart, OpenMage), `seo-dashboard`, `whizzycommerce`. The AI fetches the right one on its own for tasks like a fresh Magento install or a hacked site.
+Served as MCP prompts and through `get_playbook`: `server-setup`, `magento`, `wordpress`, `hardening`, `backups`, `site-checkup`, `malware-cleanup`, `migrate`, `bot-attack`, `seo-technical`, `publish-content`, `performance`, `updates`, `site-down`, `add-site`, `staging`, `restore`, `magento-upgrade`, `email`, `woocommerce`, `prestashop`, `shopware`, `drupal`, `laravel`, `other-shops` (Joomla, OpenCart, OpenMage), `seo-dashboard`, `whizzycommerce`, `ghost`. The AI fetches the right one on its own for tasks like a fresh Magento install or a hacked site.
 
 ## Safety
 
