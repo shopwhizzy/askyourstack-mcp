@@ -82,6 +82,13 @@ Any other client that supports remote MCP servers over streamable HTTP works the
 | `content_save`, `content_upload`, `content_trash`, `content_undo` | Write drafts, edit, upload images, trash and undo on a connected site, inside the mode its owner chose (read-only, drafts only, publish too); what a change replaced is kept 90 days | Starter |
 | `whizzy_tools` | What a connected WhizzyCommerce shop lets the AI do right now (the merchant decides per group in their WhizzyCommerce dashboard); search for one capability to read its whole input schema | Free |
 | `whizzy_call` | Run one capability of a connected WhizzyCommerce shop. Reads answer at once; a change comes back as a preview with a link the merchant confirms in their own dashboard, and its outcome can be read afterwards. Nothing the shop answers is stored | Free (reads), Starter |
+| `cf_zones` | The Cloudflare zones the user connected with an API token (Sites page), with status, plan, name servers and the connection's mode | Starter |
+| `cf_dns` | DNS records of a zone: list, add, change, remove. Records that were there before SudoWhizzy need the connection's "change anything" mode; every change can be undone | Starter |
+| `cf_purge_cache` | Clear a zone's Cloudflare cache, everything or given addresses | Starter |
+| `cf_firewall` | Custom rules and rate limits: block, challenge, allow, log by address, network, ASN, country, path, user agent, or a raw expression; remove; every rule can be undone | Starter |
+| `cf_settings` | Under attack mode, security level, development mode, browser check; in the fullest mode SSL mode, always use HTTPS and minimum TLS | Starter |
+| `cf_analytics` | Traffic through Cloudflare: requests, cached share, visitors, threats, bandwidth and status codes per day, top countries, requests per hour, a sample of what the firewall stopped in the last 24 hours | Starter |
+| `cf_undo` | Undo a Cloudflare change made through cf_dns, cf_firewall or cf_settings, or list them | Starter |
 | `redirects` | Gone pages: the 404s from the crawler logs and Search Console with a suggested target each, the site's own redirects (Magento url_rewrite, WordPress Redirection or Rank Math), new ones written with a preview and undone by batch, or the nginx and Apache lines to place | Starter |
 | `convert_images` | WebP or AVIF copies next to a site's JPEG and PNG uploads, made as the site's owner with the server's own encoder; originals untouched, a second run does only new files | Starter |
 | `list_dumps` | The database dumps kept on a server, by kind, size and age | Free |
