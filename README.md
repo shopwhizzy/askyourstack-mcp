@@ -82,6 +82,10 @@ Any other client that supports remote MCP servers over streamable HTTP works the
 | `content_save`, `content_upload`, `content_trash`, `content_undo` | Write drafts, edit, upload images, trash and undo on a connected site, inside the mode its owner chose (read-only, drafts only, publish too); what a change replaced is kept 90 days | Starter |
 | `whizzy_tools` | What a connected WhizzyCommerce shop lets the AI do right now (the merchant decides per group in their WhizzyCommerce dashboard); search for one capability to read its whole input schema | Free |
 | `whizzy_call` | Run one capability of a connected WhizzyCommerce shop. Reads answer at once; a change comes back as a preview with a link the merchant confirms in their own dashboard, and its outcome can be read afterwards. Nothing the shop answers is stored | Free (reads), Starter |
+| `keyword_volume` | Google search volume, 12-month history, CPC and competition for up to 200 keywords in a country and language (metered: a monthly allowance per plan) | Starter, SEO Starter |
+| `keyword_ideas` | Up to 100 keyword suggestions around a seed, with volume, keyword difficulty and intent | Starter, SEO Starter |
+| `serp_check` | The live Google results for a keyword, desktop or mobile, with the user's site marked and the page features (AI overview, snippets, people also ask) | Starter, SEO Starter |
+| `domain_keywords` | What a domain ranks for, with position, volume, estimated visits and page, and its competitors | Starter, SEO Starter |
 | `bing_sites` | The sites in the user's Bing Webmaster Tools account (connected on the SEO page by signing in at Bing or with an API key) and which the AI may read | Starter, SEO Starter |
 | `bing_performance` | Bing search performance: daily impressions and clicks, the last 28 days against the 28 before, top queries and pages, the pages of one query or the queries of one page | Starter, SEO Starter |
 | `bing_crawl` | Bingbot's crawl: pages crawled and in the index, errors, crawl issues per address, one address inspected | Starter, SEO Starter |
