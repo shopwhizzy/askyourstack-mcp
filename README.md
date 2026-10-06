@@ -82,6 +82,13 @@ Any other client that supports remote MCP servers over streamable HTTP works the
 | `content_save`, `content_upload`, `content_trash`, `content_undo` | Write drafts, edit, upload images, trash and undo on a connected site, inside the mode its owner chose (read-only, drafts only, publish too); what a change replaced is kept 90 days | Starter |
 | `whizzy_tools` | What a connected WhizzyCommerce shop lets the AI do right now (the merchant decides per group in their WhizzyCommerce dashboard); search for one capability to read its whole input schema | Free |
 | `whizzy_call` | Run one capability of a connected WhizzyCommerce shop. Reads answer at once; a change comes back as a preview with a link the merchant confirms in their own dashboard, and its outcome can be read afterwards. Nothing the shop answers is stored | Free (reads), Starter |
+| `bing_sites` | The sites in the user's Bing Webmaster Tools account (connected on the SEO page by signing in at Bing or with an API key) and which the AI may read | Starter, SEO Starter |
+| `bing_performance` | Bing search performance: daily impressions and clicks, the last 28 days against the 28 before, top queries and pages, the pages of one query or the queries of one page | Starter, SEO Starter |
+| `bing_crawl` | Bingbot's crawl: pages crawled and in the index, errors, crawl issues per address, one address inspected | Starter, SEO Starter |
+| `bing_keywords` | Keyword research from Bing's own data: searches on Bing for a keyword, monthly history, related keywords | Starter, SEO Starter |
+| `bing_backlinks` | Inbound links Bing knows: the site's pages with the most links, and who links to one page with which anchor text | Starter, SEO Starter |
+| `bing_sitemaps` | The sitemaps Bing knows for a site with status and counts | Starter, SEO Starter |
+| `bing_submit` | Submit up to 500 pages or a sitemap to Bing, with the quota left | Starter, SEO Starter |
 | `cf_zones` | The Cloudflare zones the user connected with an API token (Sites page), with status, plan, name servers and the connection's mode | Starter |
 | `cf_dns` | DNS records of a zone: list, add, change, remove. Records that were there before SudoWhizzy need the connection's "change anything" mode; every change can be undone | Starter |
 | `cf_purge_cache` | Clear a zone's Cloudflare cache, everything or given addresses | Starter |
