@@ -82,6 +82,9 @@ Any other client that supports remote MCP servers over streamable HTTP works the
 | `content_save`, `content_upload`, `content_trash`, `content_undo` | Write drafts, edit, upload images, trash and undo on a connected site, inside the mode its owner chose (read-only, drafts only, publish too); what a change replaced is kept 90 days | Starter |
 | `whizzy_tools` | What a connected WhizzyCommerce shop lets the AI do right now (the merchant decides per group in their WhizzyCommerce dashboard); search for one capability to read its whole input schema | Free |
 | `whizzy_call` | Run one capability of a connected WhizzyCommerce shop. Reads answer at once; a change comes back as a preview with a link the merchant confirms in their own dashboard, and its outcome can be read afterwards. Nothing the shop answers is stored | Free (reads), Starter |
+| `redirects` | Gone pages: the 404s from the crawler logs and Search Console with a suggested target each, the site's own redirects (Magento url_rewrite, WordPress Redirection or Rank Math), new ones written with a preview and undone by batch, or the nginx and Apache lines to place | Starter |
+| `list_dumps` | The database dumps kept on a server, by kind, size and age | Free |
+| `db_restore` | Load a dump back into a site's database with its own credentials; the database as it is now is dumped first, so the restore can be undone | Starter |
 | `seo_fields` | SEO titles, meta descriptions and image alt texts of a WordPress site (Yoast SEO, Rank Math, SEOPress, The SEO Framework) or a Magento 2 shop (products, categories, CMS pages, image labels): list what is there or missing, change in small batches with a preview of old against new, undo a batch | Starter |
 | `db_dump` | Dump a site's database on its server, with its own credentials | Starter |
 | `transfer`, `transfer_close` | Copy a folder directly between two of your servers for a migration | Starter |
