@@ -163,4 +163,4 @@ Free: one server, read-only, 50 tool calls a day. Paid plans add changes, approv
 
 info@sudowhizzy.com · [Terms](https://sudowhizzy.com/terms) · [Privacy](https://sudowhizzy.com/privacy)
 
-SudoWhizzy is operated by Whizzy Digital Solutions Lda, Portugal. The SudoWhizzy service and agent are proprietary; this README may be quoted in MCP directories and listings.
+SudoWhizzy is operated by Whizzy Digital Solutions Lda, Portugal. The agent installed on your server is open source (Apache-2.0): https://github.com/shopwhizzy/sudowhizzy-agent, with a script that checks each release against its source. The hosted service is proprietary; this README may be quoted in MCP directories and listings.
