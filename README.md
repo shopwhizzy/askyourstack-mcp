@@ -1,54 +1,54 @@
-# SudoWhizzy MCP server
+# AskYourStack MCP server
 
 **Let Claude, ChatGPT, Cursor or Claude Code manage your own Linux servers, with approvals for anything risky.**
 
-SudoWhizzy is a hosted, remote MCP server. Install a small agent on your server with one line, add your private SudoWhizzy MCP address to your AI client, and ask in plain words: set up a raw VPS, install Magento or WordPress, fix a 500 error, take backups, clean up malware, harden the server or move a site to a new one. For SEO it reads Google Search Console, Google Analytics 4, Core Web Vitals, on-page audits and your structured data next to what Googlebot really fetches in your server logs, and fixes the causes on the server.
+AskYourStack is a hosted, remote MCP server. Install a small agent on your server with one line, add your private AskYourStack MCP address to your AI client, and ask in plain words: set up a raw VPS, install Magento or WordPress, fix a 500 error, take backups, clean up malware, harden the server or move a site to a new one. For SEO it reads Google Search Console, Google Analytics 4, Core Web Vitals, on-page audits and your structured data next to what Googlebot really fetches in your server logs, and fixes the causes on the server.
 
-- Website: https://sudowhizzy.com
-- Docs: https://sudowhizzy.com/docs
-- Security model: https://sudowhizzy.com/security
-- Prompt library: https://sudowhizzy.com/prompts
+- Website: https://askyourstack.com
+- Docs: https://askyourstack.com/docs
+- Security model: https://askyourstack.com/security
+- Prompt library: https://askyourstack.com/prompts
 
-> This repository holds the listing and documentation for the SudoWhizzy MCP server. The service itself is hosted at sudowhizzy.com; there is nothing to build or run locally.
+> This repository holds the listing and documentation for the AskYourStack MCP server. The service itself is hosted at askyourstack.com; there is nothing to build or run locally.
 
 ## How it works
 
-1. **Connect your server.** Sign up free at [sudowhizzy.com](https://sudowhizzy.com/login?mode=signup), name your server and paste the one-line install as the Linux user who owns your sites (the agent then manages only that user's sites and files), or as root when it should run the whole server. The agent dials out to sudowhizzy.com over HTTPS: it opens no port, and no SSH key or password is stored anywhere.
-2. **Add SudoWhizzy to your AI client** with your private MCP address from the dashboard (see below).
-3. **Ask.** Your AI looks at the server first, explains its plan, and runs the work through SudoWhizzy's tools. Anything destructive waits for your approval.
+1. **Connect your server.** Sign up free at [askyourstack.com](https://askyourstack.com/login?mode=signup), name your server and paste the one-line install as the Linux user who owns your sites (the agent then manages only that user's sites and files), or as root when it should run the whole server. The agent dials out to askyourstack.com over HTTPS: it opens no port, and no SSH key or password is stored anywhere.
+2. **Add AskYourStack to your AI client** with your private MCP address from the dashboard (see below).
+3. **Ask.** Your AI looks at the server first, explains its plan, and runs the work through AskYourStack's tools. Anything destructive waits for your approval.
 
 ## Connect your AI client
 
 Two ways in:
 
-- **Sign in (OAuth):** clients that support sign-in for remote MCP servers connect to `https://sudowhizzy.com/mcp`. You sign in to SudoWhizzy, see which app is asking and allow it. Each app gets its own access, which you can end under Security in the dashboard.
-- **Private address:** `https://sudowhizzy.com/mcp/YOUR-ADDRESS`, from the dashboard, for clients without sign-in. Keep it private, and make a new one in the dashboard if it leaks. The examples below use it.
+- **Sign in (OAuth):** clients that support sign-in for remote MCP servers connect to `https://askyourstack.com/mcp`. You sign in to AskYourStack, see which app is asking and allow it. Each app gets its own access, which you can end under Security in the dashboard.
+- **Private address:** `https://askyourstack.com/mcp/YOUR-ADDRESS`, from the dashboard, for clients without sign-in. Keep it private, and make a new one in the dashboard if it leaks. The examples below use it.
 
-The tool and playbook catalogue is public at `https://sudowhizzy.com/mcp/catalog`.
+The tool and playbook catalogue is public at `https://askyourstack.com/mcp/catalog`.
 
-**Claude (claude.ai and Claude Desktop):** Settings, Connectors, Add custom connector. Name it SudoWhizzy, paste the address and leave the OAuth fields empty. [Guide](https://sudowhizzy.com/claude)
+**Claude (claude.ai and Claude Desktop):** Settings, Connectors, Add custom connector. Name it AskYourStack, paste the address and leave the OAuth fields empty. [Guide](https://askyourstack.com/claude)
 
 **Claude Code:**
 
 ```bash
-claude mcp add --transport http sudowhizzy https://sudowhizzy.com/mcp/YOUR-ADDRESS
+claude mcp add --transport http sudowhizzy https://askyourstack.com/mcp/YOUR-ADDRESS
 ```
 
-[Guide](https://sudowhizzy.com/claude-code)
+[Guide](https://askyourstack.com/claude-code)
 
 **Cursor** (`mcp.json`):
 
 ```json
 {
   "mcpServers": {
-    "sudowhizzy": { "url": "https://sudowhizzy.com/mcp/YOUR-ADDRESS" }
+    "sudowhizzy": { "url": "https://askyourstack.com/mcp/YOUR-ADDRESS" }
   }
 }
 ```
 
-[Guide](https://sudowhizzy.com/cursor)
+[Guide](https://askyourstack.com/cursor)
 
-**ChatGPT:** Settings, Connectors, turn on developer mode, then add a custom connector with your address and no authentication. [Guide](https://sudowhizzy.com/chatgpt)
+**ChatGPT:** Settings, Connectors, turn on developer mode, then add a custom connector with your address and no authentication. [Guide](https://askyourstack.com/chatgpt)
 
 Any other client that supports remote MCP servers over streamable HTTP works the same way.
 
@@ -94,7 +94,7 @@ Any other client that supports remote MCP servers over streamable HTTP works the
 | `bing_sitemaps` | The sitemaps Bing knows for a site with status and counts | Starter, SEO Starter |
 | `bing_submit` | Submit up to 500 pages or a sitemap to Bing, with the quota left | Starter, SEO Starter |
 | `cf_zones` | The Cloudflare zones the user connected with an API token (Sites page), with status, plan, name servers and the connection's mode | Starter |
-| `cf_dns` | DNS records of a zone: list, add, change, remove. Records that were there before SudoWhizzy need the connection's "change anything" mode; every change can be undone | Starter |
+| `cf_dns` | DNS records of a zone: list, add, change, remove. Records that were there before AskYourStack need the connection's "change anything" mode; every change can be undone | Starter |
 | `cf_purge_cache` | Clear a zone's Cloudflare cache, everything or given addresses | Starter |
 | `cf_firewall` | Custom rules and rate limits: block, challenge, allow, log by address, network, ASN, country, path, user agent, or a raw expression; remove; every rule can be undone | Starter |
 | `cf_settings` | Under attack mode, security level, development mode, browser check; in the fullest mode SSL mode, always use HTTPS and minimum TLS | Starter |
@@ -143,13 +143,13 @@ Served as MCP prompts and through `get_playbook`: `server-setup`, `magento`, `wo
 ## Safety
 
 - **Every call is sorted by risk.** Reads run at once. Changes run after `/etc` is saved. Destructive actions (deleting your data, dropping databases, SSH, sudo and firewall changes, reboots) wait for your approval. Anything touching the agent's own key is blocked.
-- **Approvals the AI cannot fake.** You approve signed in on sudowhizzy.com; an approval runs once, only with the exact arguments you saw, within 30 minutes. Text planted in a log or web page cannot approve anything. The approval page says in plain words what the action does, what could go wrong and how to undo it, and before an approved delete of database tables or whole folders a copy is saved first when the command names them plainly.
+- **Approvals the AI cannot fake.** You approve signed in on askyourstack.com; an approval runs once, only with the exact arguments you saw, within 30 minutes. Text planted in a log or web page cannot approve anything. The approval page says in plain words what the action does, what could go wrong and how to undo it, and before an approved delete of database tables or whole folders a copy is saved first when the command names them plainly.
 - **Modes and kill switch.** Each server is read-only, normal or full trust. Pause a server or the whole account in one click; disconnecting revokes the agent.
 - **Undo.** `/etc` snapshots before changes, previous versions of every overwritten file, snapshots and rollback.
 - **Secrets stay on the server.** Database credentials are read from the site's own config and never reach the AI. Your MCP address is stored only as a hash.
 - **Signed agent updates** and a full audit log of every call.
 
-More at https://sudowhizzy.com/security
+More at https://askyourstack.com/security
 
 ## Supported servers
 
@@ -157,10 +157,10 @@ Linux with systemd (Debian, Ubuntu, Rocky Linux, AlmaLinux, RHEL and similar), x
 
 ## Pricing
 
-Free: one server, read-only, 50 tool calls a day. Paid plans add changes, approvals and snapshots and the SEO tools with Google Search Console (Starter, 1 server, 3 properties), the malware scan, site checks every 15 minutes, Google Analytics 4, on-page and technical SEO tools and longer history (Pro, 5 servers, 10 properties; Agency, 25 servers, 25 properties, up to 3 Google accounts). Current prices: https://sudowhizzy.com/#pricing. Your AI client is billed separately by its own provider.
+Free: one server, read-only, 50 tool calls a day. Paid plans add changes, approvals and snapshots and the SEO tools with Google Search Console (Starter, 1 server, 3 properties), the malware scan, site checks every 15 minutes, Google Analytics 4, on-page and technical SEO tools and longer history (Pro, 5 servers, 10 properties; Agency, 25 servers, 25 properties, up to 3 Google accounts). Current prices: https://askyourstack.com/#pricing. Your AI client is billed separately by its own provider.
 
 ## Support
 
-info@sudowhizzy.com · [Terms](https://sudowhizzy.com/terms) · [Privacy](https://sudowhizzy.com/privacy)
+info@askyourstack.com · [Terms](https://askyourstack.com/terms) · [Privacy](https://askyourstack.com/privacy)
 
-SudoWhizzy is operated by Whizzy Digital Solutions Lda, Portugal. The agent installed on your server is open source (Apache-2.0): https://github.com/shopwhizzy/sudowhizzy-agent, with a script that checks each release against its source. The hosted service is proprietary; this README may be quoted in MCP directories and listings.
+AskYourStack is operated by Whizzy Digital Solutions Lda, Portugal. The agent installed on your server is open source (Apache-2.0): https://github.com/shopwhizzy/askyourstack-agent, with a script that checks each release against its source. The hosted service is proprietary; this README may be quoted in MCP directories and listings.

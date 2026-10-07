@@ -6,7 +6,7 @@
   "version": "0.17.0",
   "websiteUrl": "https://sudowhizzy.com",
   "repository": {
-    "url": "https://github.com/shopwhizzy/sudowhizzy-mcp",
+    "url": "https://github.com/shopwhizzy/askyourstack-mcp",
     "source": "github"
   },
   "remotes": [
