@@ -2,7 +2,7 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "com.askyourstack/askyourstack",
   "title": "AskYourStack",
-  "description": "Ask your stack: let Claude, ChatGPT or Cursor manage your Linux servers, sites and SEO, with approvals for anything risky.",
+  "description": "Let Claude, ChatGPT or Cursor manage your servers, sites and SEO, with approvals for risky actions.",
   "version": "0.18.0",
   "websiteUrl": "https://askyourstack.com",
   "repository": {
