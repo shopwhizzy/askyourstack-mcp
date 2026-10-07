@@ -13,7 +13,7 @@ SudoWhizzy is a hosted, remote MCP server. Install a small agent on your server 
 
 ## How it works
 
-1. **Connect your server.** Sign up free at [sudowhizzy.com](https://sudowhizzy.com/login?mode=signup), name your server and paste the one-line install as root. The agent dials out to sudowhizzy.com over HTTPS: it opens no port, and no SSH key or password is stored anywhere.
+1. **Connect your server.** Sign up free at [sudowhizzy.com](https://sudowhizzy.com/login?mode=signup), name your server and paste the one-line install as the Linux user who owns your sites (the agent then manages only that user's sites and files), or as root when it should run the whole server. The agent dials out to sudowhizzy.com over HTTPS: it opens no port, and no SSH key or password is stored anywhere.
 2. **Add SudoWhizzy to your AI client** with your private MCP address from the dashboard (see below).
 3. **Ask.** Your AI looks at the server first, explains its plan, and runs the work through SudoWhizzy's tools. Anything destructive waits for your approval.
 
@@ -67,7 +67,7 @@ Any other client that supports remote MCP servers over streamable HTTP works the
 | `list_sites` | The sites on the server: Magento 2, OpenMage (Magento 1), WordPress and WooCommerce, PrestaShop, Shopware 6, Drupal, Joomla, OpenCart and Laravel, found from the web server's own configuration (Plesk, CloudPanel, RunCloud, DirectAdmin and plain layouts) and in Docker containers: kind, root, domains, access logs, owner, version, database (passwords never shown), its console | Free |
 | `logs` | A log by name (web-error, php, magento, wordpress, database, system, mail, auth, or any file) for a time window, with repeated errors counted once, a sample of each and the latest lines | Free |
 | `read_file` | Read a file | Free |
-| `run` | Run a shell command as root; read-only commands on Free | Free / Starter |
+| `run` | Run a shell command as the agent's user (root, or the site's own user); read-only commands on Free | Free / Starter |
 | `list_jobs`, `job_output` | Follow background jobs, reading only new output | Free |
 | `list_snapshots` | Snapshots on the server | Free |
 | `start_job`, `stop_job` | Long commands (installs, composer, imports) in the background, surviving the chat | Starter |
