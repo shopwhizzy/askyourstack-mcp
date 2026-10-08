@@ -58,6 +58,7 @@ Any other client that supports remote MCP servers over streamable HTTP works the
 |---|---|---|
 | `overview` | Where everything stands in one call: plan, servers and their sites, open problems and warnings from the monitoring, approvals waiting, connected Google properties, saved notes and recent work | Free |
 | `propose_plan` | Ask approval once for a job with several risky steps: the user sees every risky step and approves them together; each then runs once, exactly as listed | Free |
+| `wait_for_approval` | After giving the user an approval, plan or change-window link, wait in the same turn until they decide, then carry on without them returning to the chat | Starter |
 | `save_note`, `forget_note` | Short notes about a server or the account that the next chat sees in `overview` (never passwords: those are refused) | Free |
 | `log_work` | A plain summary of a finished task, for the owner's dashboard and the next chat | Free |
 | `list_servers` | The servers on the account: online, safety mode, paused | Free |

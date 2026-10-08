@@ -3,7 +3,7 @@
   "name": "com.askyourstack/askyourstack",
   "title": "AskYourStack",
   "description": "Let Claude, ChatGPT or Cursor manage your servers, sites and SEO, with approvals for risky actions.",
-  "version": "0.18.0",
+  "version": "0.19.0",
   "websiteUrl": "https://askyourstack.com",
   "repository": {
     "url": "https://github.com/shopwhizzy/askyourstack-mcp",
