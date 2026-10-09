@@ -94,6 +94,7 @@ Any other client that supports remote MCP servers over streamable HTTP works the
 | `bing_backlinks` | Inbound links Bing knows: the site's pages with the most links, and who links to one page with which anchor text | Starter, SEO Starter |
 | `bing_sitemaps` | The sitemaps Bing knows for a site with status and counts | Starter, SEO Starter |
 | `bing_submit` | Submit up to 500 pages or a sitemap to Bing, with the quota left | Starter, SEO Starter |
+| `disavow_file` | The disavow file for Google's disavow links tool, from the user's backlink data (Ahrefs, Semrush, SE Ranking, Bing), merged with the file Google already has and checked against Google's format and limits; the user uploads it (Google has no API for it) | Starter, SEO Starter |
 | `cf_zones` | The Cloudflare zones the user connected with an API token (Sites page), with status, plan, name servers and the connection's mode | Starter |
 | `cf_dns` | DNS records of a zone: list, add, change, remove. Records that were there before AskYourStack need the connection's "change anything" mode; every change can be undone | Starter |
 | `cf_purge_cache` | Clear a zone's Cloudflare cache, everything or given addresses | Starter |
