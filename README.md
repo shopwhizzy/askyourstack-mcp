@@ -115,14 +115,15 @@ Any other client that supports remote MCP servers over streamable HTTP works the
 | `site_audit_report` | Read a site audit by issue (broken links, redirect chains, repeated titles, duplicate and thin pages, sitemap problems), by page, or against the run before | Pro |
 | `seo_history` | Daily Search Console, Analytics and Core Web Vitals figures stored once the user switches history on, with alerts: clicks fell, a top page left the index, a vital turned poor | Starter |
 | `indexnow_submit` | Tell Bing, Yandex and the other IndexNow search engines which pages are new, changed or gone | Starter |
-| `gsc_properties` | The Google Search Console properties the user picked (connected read-only in the dashboard) | Starter |
-| `gsc_performance_overview` | How the site is doing: the period against the one before, daily trend, biggest winning and losing queries and pages | Starter |
-| `gsc_search_analytics` | Clicks, impressions, CTR and position by query, page, country, device or date, with filters and two-period comparison | Starter |
-| `gsc_inspect_url` | Google's URL Inspection for up to 20 URLs: indexed or not and why, last crawl, Google's canonical | Starter |
-| `gsc_sitemaps` | Submitted sitemaps: errors, warnings, last download, URLs per type | Starter |
+| `gsc_properties` | The Google Search Console properties the user picked (connected read-only in the dashboard) | Free |
+| `gsc_performance_overview` | How the site is doing: the period against the one before, daily trend, biggest winning and losing queries and pages | Free |
+| `gsc_search_analytics` | Clicks, impressions, CTR and position by query, page, country, device or date, with filters and two-period comparison | Free |
+| `gsc_inspect_url` | Google's URL Inspection for up to 20 URLs: indexed or not and why, last crawl, Google's canonical | Free |
+| `gsc_sitemaps` | Submitted sitemaps: errors, warnings, last download, URLs per type | Free |
 | `core_web_vitals` | Real-user LCP, INP, CLS, FCP and TTFB from the Chrome UX Report for a page or site, LCP broken into parts, 6 months of weekly history, optional Lighthouse test | Starter |
 | `validate_schema` | Structured data (JSON-LD and microdata) checked against schema.org and Google's rich-result requirements, live URL or pasted HTML | Starter |
-| `google_updates` | Google core, spam and Discover updates since 2021 with their rollout dates, to line up with traffic changes | Starter |
+| `google_updates` | Google core, spam and Discover updates since 2021 with their rollout dates, to line up with traffic changes | Free |
+| `gsc_opportunities` | What to work on first, ranked by clicks at stake: queries just off the top places, page-one pages with a low CTR, pages losing clicks, and two pages competing for one query, each with what to do | Free |
 | `gsc_cannibalization` | Searches where two or more of the site's pages compete in Google, with clicks, impressions and position per page | Pro |
 | `ga4_properties` | The Google Analytics 4 properties the user picked, with a tracking health check (data flowing, key events, retention) | Pro |
 | `ga4_overview` | Sessions, users, engagement, conversions and revenue against the period before, by channel, with organic search's share | Pro |
@@ -133,10 +134,11 @@ Any other client that supports remote MCP servers over streamable HTTP works the
 | `page_audit` | On-page audit of up to 10 URLs on any site: redirects, headers, title, description, robots, canonical, hreflang, headings, Open Graph, alt text, content length, issues | Pro |
 | `page_links` | Every link on a page with anchor text and nofollow; finds broken and redirected links | Pro |
 | `page_content` | A page's main text without navigation and footers, as markdown | Pro |
-| `robots_check` | robots.txt tests the way Google reads them, for Googlebot, Bingbot and AI crawlers | Pro |
+| `robots_check` | robots.txt tests the way Google reads them, for Googlebot, Bingbot and AI crawlers | Free |
+| `llms_txt` | Builds an llms.txt for a site (the file AI assistants read): name, summary and its key pages from the sitemap with their own titles and descriptions; writes nothing | Starter |
 | `sitemap_check` | Sitemap audit (indexes, limits, lastmod) with a sample of URLs checked for status, redirects, noindex and canonical | Pro |
 
-Search Console history by plan: Starter the last 30 days, Pro 90 days, Agency all 16 months Google keeps. Google Analytics 4: Pro 10 properties and 90 days, Agency 25 and all history. Core Web Vitals: 100 checks a day on Starter, 300 on Pro, 1,000 on Agency. Agency can connect up to 3 Google accounts (clients' own).
+Search Console history: all 16 months Google keeps, on every plan (Free reads one property). Google Analytics 4: Pro 10 properties and 90 days, Agency 25 and all history. Core Web Vitals: 100 checks a day on Starter, 300 on Pro, 1,000 on Agency. Agency can connect up to 3 Google accounts (clients' own).
 
 ## Playbooks
 
@@ -159,7 +161,7 @@ Linux with systemd (Debian, Ubuntu, Rocky Linux, AlmaLinux, RHEL and similar), x
 
 ## Pricing
 
-Free: one server, read-only, 50 tool calls a day. Paid plans add changes, approvals and snapshots and the SEO tools with Google Search Console (Starter, 1 server, 3 properties), the malware scan, site checks every 15 minutes, Google Analytics 4, on-page and technical SEO tools and longer history (Pro, 5 servers, 10 properties; Agency, 25 servers, 25 properties, up to 3 Google accounts). Current prices: https://askyourstack.com/#pricing. Your AI client is billed separately by its own provider.
+Free: one server, read-only, 50 tool calls a day, and Google Search Console for one property with the opportunities report. Paid plans add changes, approvals and snapshots and the SEO tools with Google Search Console (Starter, 1 server, 3 properties), the malware scan, site checks every 15 minutes, Google Analytics 4, on-page and technical SEO tools and longer history (Pro, 5 servers, 10 properties; Agency, 25 servers, 25 properties, up to 3 Google accounts). Current prices: https://askyourstack.com/#pricing. Every tool with what it does and its plan: https://askyourstack.com/docs/tools. Your AI client is billed separately by its own provider.
 
 ## Support
 
