@@ -96,17 +96,29 @@ Any other client that supports remote MCP servers over streamable HTTP works the
 | `bing_submit` | Submit up to 500 pages or a sitemap to Bing, with the quota left | Starter, SEO Starter |
 | `disavow_file` | The disavow file for Google's disavow links tool, from the user's backlink data (Ahrefs, Semrush, SE Ranking, Bing), merged with the file Google already has and checked against Google's format and limits; the user uploads it (Google has no API for it) | Starter, SEO Starter |
 | `cf_zones` | The Cloudflare zones the user connected with an API token (Sites page), with status, plan, name servers and the connection's mode | Starter |
-| `cf_dns` | DNS records of a zone: list, add, change, remove. Records that were there before AskYourStack need the connection's "change anything" mode; every change can be undone | Starter |
+| `cf_dns_list` | List the DNS records of a Cloudflare zone, filtered by type, name or search (part of a name or content), each with its id. | Starter |
+| `cf_dns_add` | Add a DNS record to a Cloudflare zone: a new subdomain, a mail record or a verification text. | Starter |
+| `cf_dns_change` | Change one DNS record of a Cloudflare zone, by record_id from cf_dns_list (or name plus type when they match one record): its content, TTL, proxy, priority or name. | Starter |
+| `cf_dns_remove` | Remove one DNS record of a Cloudflare zone, by record_id from cf_dns_list (or name plus type when they match one record). | Starter |
 | `cf_purge_cache` | Clear a zone's Cloudflare cache, everything or given addresses | Starter |
-| `cf_firewall` | Custom rules and rate limits: block, challenge, allow, log by address, network, ASN, country, path, user agent, or a raw expression; remove; every rule can be undone | Starter |
+| `cf_firewall_list` | List the custom firewall rules and rate limits of a Cloudflare zone, each with its id, action and expression. | Starter |
+| `cf_firewall_add` | Add one firewall rule or rate limit to a Cloudflare zone. | Starter |
+| `cf_firewall_remove` | Remove one custom firewall rule or rate limit from a Cloudflare zone, by rule_id from cf_firewall_list. | Starter |
 | `cf_settings` | Under attack mode, security level, development mode, browser check; in the fullest mode SSL mode, always use HTTPS and minimum TLS | Starter |
 | `cf_analytics` | Traffic through Cloudflare: requests, cached share, visitors, threats, bandwidth and status codes per day, top countries, requests per hour, a sample of what the firewall stopped in the last 24 hours | Starter |
 | `cf_undo` | Undo a Cloudflare change made through cf_dns, cf_firewall or cf_settings, or list them | Starter |
-| `redirects` | Gone pages: the 404s from the crawler logs and Search Console with a suggested target each, the site's own redirects (Magento url_rewrite, WordPress Redirection or Rank Math), new ones written with a preview and undone by batch, or the nginx and Apache lines to place | Starter |
+| `redirects_find` | Find the paths of a site on the user's server that answer 404: from the crawler hits in its access logs (the last hours, default 168) and, when Search Console is connected, pages that had clicks in the last 90 days and are gone now. | Starter |
+| `redirects_list` | The custom redirects a site holds: Magento's url_rewrite table, or WordPress with the Redirection or Rank Math plugin. | Starter |
+| `redirects_apply` | Write redirects (from a path, to a path or full address, code 301 or 302) into the site's redirect store: Magento url_rewrite, or the WordPress Redirection or Rank Math plugin. | Starter |
+| `redirects_undo` | Remove the redirects one redirects_apply batch wrote. | Starter |
+| `redirects_history` | The batches of redirects written on a site in the last 90 days, each with its redirects and whether it was undone. | Starter |
 | `convert_images` | WebP or AVIF copies next to a site's JPEG and PNG uploads, made as the site's owner with the server's own encoder; originals untouched, a second run does only new files | Starter |
 | `list_dumps` | The database dumps kept on a server, by kind, size and age | Free |
 | `db_restore` | Load a dump back into a site's database with its own credentials; the database as it is now is dumped first, so the restore can be undone | Starter |
-| `seo_fields` | SEO titles, meta descriptions and image alt texts of a WordPress site (Yoast SEO, Rank Math, SEOPress, The SEO Framework) or a Magento 2 shop (products, categories, CMS pages, image labels): list what is there or missing, change in small batches with a preview of old against new, undo a batch | Starter |
+| `seo_fields_list` | List the SEO titles, meta descriptions or image alt texts of a WordPress site (Yoast SEO, Rank Math, SEOPress or The SEO Framework) or a Magento 2 shop (products, categories, CMS pages and product images at the default store scope), with their current values. | Starter |
+| `seo_fields_apply` | Set SEO titles, meta descriptions or image alt texts on a WordPress site or a Magento 2 shop, up to 30 fields a call, by the ids seo_fields_list gave. | Starter |
+| `seo_fields_undo` | Put back the values a seo_fields_apply batch replaced (kept 90 days). | Starter |
+| `seo_fields_history` | The batches of SEO title, description and alt text changes made on a site in the last 90 days, with what each changed and whether it was undone. | Starter |
 | `db_dump` | Dump a site's database on its server, with its own credentials | Starter |
 | `transfer`, `transfer_close` | Copy a folder directly between two of your servers for a migration | Starter |
 | `malware_scan` | Backdoors, PHP in uploads, disguised PHP, injected scripts in the database, suspicious cron, plus a maintained rule set: known skimmer and backdoor signatures, missing Magento security patches, vulnerable modules, WordPress plugins and themes, exposed .git and .env, config copies, crypto miners and rootkit signs on the server | Pro |
@@ -137,6 +149,18 @@ Any other client that supports remote MCP servers over streamable HTTP works the
 | `robots_check` | robots.txt tests the way Google reads them, for Googlebot, Bingbot and AI crawlers | Free |
 | `llms_txt` | Builds an llms.txt for a site (the file AI assistants read): name, summary and its key pages from the sitemap with their own titles and descriptions; writes nothing | Starter |
 | `sitemap_check` | Sitemap audit (indexes, limits, lastmod) with a sample of URLs checked for status, redirects, noindex and canonical | Pro |
+| `job_output` | Status (running, finished, ended), exit code and output of a background job. | Free |
+| `stop_job` | Stop a running background job and everything it started. | Starter |
+| `rollback` | Write a snapshot's files back (all of it, or only some paths). | Starter |
+| `forget_note` | Delete a saved note that is wrong or no longer true (its id is in overview). | Free |
+| `merchant_accounts` | The Google Merchant Center accounts the user's connected Google account can see (sub-accounts of a multi-client account included), with their ids. | Starter, SEO Starter |
+| `merchant_issues` | Why products are not showing in Google Shopping ads and free listings: per destination and country the number of products active, pending, disapproved and expiring, the account's own issues (suspensions, missing settings, website claims), and the product issues grouped by kind with how many products each hits, how severe it is, Google's explanation and help link. | Starter, SEO Starter |
+| `merchant_products` | Products in Merchant Center with their issues: offer id, title, link, and each issue with severity, the attribute concerned, where it applies and Google's explanation. | Starter, SEO Starter |
+| `content_get` | Read one item of a connected site in full, as its editor would see it: title, content (the stored source), status, address and what else it has. | Free |
+| `content_upload` | Add an image to a connected site's media library (WordPress) or files (Shopify) from a public address (jpeg, png, gif, webp or avif, up to 15 MB), with its alt text and title. | Starter |
+| `content_trash` | Move a post, page or other item of a WordPress site to its trash (WordPress keeps it 30 days; content_undo brings it back), or remove a URL redirect of a Shopify store (content_undo makes it again). | Starter |
+| `content_undo` | Undo a change made through content_save, content_upload or content_trash on a connected site: an edit gets its old values back, a created item goes to the trash, a trashed one comes back. | Starter |
+| `transfer_close` | Close the copy links between servers (removes the temporary keys). | Starter |
 
 Search Console history: all 16 months Google keeps, on every plan (Free reads one property). Google Analytics 4: Pro 10 properties and 90 days, Agency 25 and all history. Core Web Vitals: 100 checks a day on Starter, 300 on Pro, 1,000 on Agency. Agency can connect up to 3 Google accounts (clients' own).
 
