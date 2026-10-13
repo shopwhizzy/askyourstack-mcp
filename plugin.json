@@ -1,0 +1,13 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "askyourstack",
+  "version": "0.21.0",
+  "description": "Let Claude, ChatGPT or Cursor manage your servers, sites and SEO, with approvals for risky actions.",
+  "author": {
+    "name": "ShopWhizzy",
+    "url": "https://askyourstack.com"
+  },
+  "homepage": "https://askyourstack.com",
+  "repository": "https://github.com/shopwhizzy/askyourstack-mcp",
+  "keywords": ["mcp", "server management", "devops", "seo", "magento", "wordpress", "google search console", "cloudflare"]
+}
